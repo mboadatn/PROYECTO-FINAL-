@@ -4,30 +4,96 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
-    </head>
-<body style="background-color: #e6d6ab;margin: 35px;font-family:Verdana, Geneva, Tahoma, sans-serif;">
-   <h1 style="text-align:center; color:black; ">COLEGIO SAN GABRIEL</h1> 
-   <!--Barra Navegacion-->
-   <style>
-    nav a{color: black; text-decoration: none; /* quita subrayado*/ font-weight: bold;}
-   </style>
-   <nav style="background-color: #e6d6ab; padding: 15px; display: flex; justify-content:space-around; "> 
-        <a href="/pages/nosotros.html" style="text-align:center; color:black;">
-            NOSOTROS
-        </a>
-        <a href="/pages/mision y vision.html" style="color:black;">
-            MISIÓN Y VISIÓN
-        </a>
-   </nav>
-    <p>
-        Ser gabrielino significa crecer en un entorno de aprendizaje Innovador, con una educación que inspira a servir, pensar y transformar el mundo.
 
-Aquí cada estudiante desarrolla su potencial con una formación integral que equilibra la fe, el conocimiento y la acción. ¡Ser gabrielino es llevar en el corazón la tradición, la educación y la Innovación!
-    </p>
-    <hr>
-    <div style="text-align:center;">
-        <!--Comentarios-->
-            <img src="/images/PORTADA.jpg" alt="#" width="500px" height="500px">
+    <style>
+        /* ===== ESTILO GENERAL ===== */
+        body{
+            margin: 0;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: #e6d6ab; /* Fondo beige */
+            position: relative;
+            min-height: 100vh;
+        }
+
+        /* ===== MARCA DE AGUA ===== */
+        body::before{
+            content: "";
+            position: fixed;
+            inset: 0; /* equivale a top:0; right:0; bottom:0; left:0 */
+            background-image: url("/images/PORTADA.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            opacity: 0.39; /* Ajusta aquí (0.10 más suave, 0.25 más fuerte) */
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        /* ===== CONTENIDO ENCIMA DE LA MARCA ===== */
+        .contenido{
+            position: relative;
+            z-index: 1;
+            padding: 20px 40px;
+        }
+
+        /* ===== TÍTULO ===== */
+        h1{
+            text-align: center;
+            color: black;
+        }
+
+        /* ===== BARRA DE NAVEGACIÓN ===== */
+        nav{
+            padding: 15px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        nav a{
+            color: rgb(19, 53, 161);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav a:hover{
+            text-decoration: underline;
+        }
+
+        /* ===== TEXTO ===== */
+        p{
+            text-align: justify;
+        }
+
+        hr{
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="contenido">
+
+        <h1>COLEGIO SAN GABRIEL</h1>
+
+        <!-- Barra de Navegación -->
+        <nav>
+            <a href="/pages/nosotros.html">NOSOTROS</a>
+            <a href="/pages/mision y vision.html">MISIÓN Y VISIÓN</a>
+        </nav>
+
+        <p>
+            Ser gabrielino significa crecer en un entorno de aprendizaje innovador, 
+            con una educación que inspira a servir, pensar y transformar el mundo.
+            Aquí cada estudiante desarrolla su potencial con una formación integral 
+            que equilibra la fe, el conocimiento y la acción. 
+            ¡Ser gabrielino es llevar en el corazón la tradición, la educación y la innovación!
+        </p>
+
+        <hr>
+
     </div>
+
 </body>
 </html>
